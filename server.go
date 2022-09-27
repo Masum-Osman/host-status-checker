@@ -21,5 +21,5 @@ func status(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/status", logging(status))
-	http.ListenAndServe(":8084", nil)
+	http.ListenAndServe(":40040", nil)
 }
