@@ -3,12 +3,11 @@ FROM golang:latest
 WORKDIR /app
 
 COPY go.mod ./
-COPY go.sum ./
 RUN go mod download
 
 COPY *.go ./
 
-RUN go build -o /dokcer-gs-ping
+RUN go build -o /host-status
 
-EXPOSE 400040
-CMD [ "/docker-gs-ping" ]
+EXPOSE 40040
+CMD [ "/host-status" ]
